@@ -19,12 +19,11 @@ body {
 
 .page-header::after {
     content: "";
-    display: inline-block;
+    display: block;
     position: absolute;
     height: 6px;
-    background-color: #323746;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
-    margin-bottom: 0px;
-    z-index: 1;
+    width: 100%;
+    background-color: #323746;
 }
 
 .page-header__wrapper {
@@ -53,7 +52,8 @@ body {
 
 }
 
-.logo--modifier {
+.logo--modifier,
+.navigation__item--current {
     color: #f06c64;
 }
 
@@ -77,7 +77,18 @@ body {
     color: #494e62;
 }
 
-.navigation__item--current {
-    color: #f06c64;
+.slider-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
+.slider__arrow--left {
+    padding-left: 53px;
+}
+
+.slider__content {
+    margin-top: 53px;
+    
+}
