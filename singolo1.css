@@ -6,13 +6,14 @@ body {
 }
 
 .page-wrapper {
-    max-width: 1020px;
-    border: 1px solid red;
+    max-width: 940px;
+    padding: 0 40px 0 40px;
+
 }
 
 .page-header {
     height: 92px;
-    /* background-color: #2d303a; */
+    background-color: #2d303a; 
     position: relative;
 
 }
@@ -31,7 +32,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 26px 40px;
+    margin: 27px 0;
 }
 
 .navigation__list {
@@ -84,11 +85,122 @@ body {
     align-items: center;
 }
 
-.slider__arrow--left {
-    padding-left: 53px;
+.slider__btn-arrow {
+    width: 16px;
+    height: 27px;
+    background-color: #ca4549;
+    border: none;
+    background: url("./assets/chev.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.slider__btn-arrow--right {
+    transform: rotate(180deg);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 }
 
 .slider__content {
     margin-top: 53px;
+    margin-bottom: 58px;
+    display: flex;
+    align-items: center;
+}
+
+.slider__img {
+    padding-right: 36px;
+    padding-left: 35px;
+}
+
+.slider::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 6px;
+    width: 100%;
+   background-color: #ea676b;
+}
+
+.services {
+    margin-top: 6px;
+    background-color: #f2f2f2;
+}
+.services__title {
+    margin: 0;
+    padding: 0;
+    color: #666d89;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 17.86px;
+    margin-top: 65px;
+}
+
+.services__description {
+    margin: 0;
+    padding: 0;
+    color: #767e9e;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-top: 33px;
+}
+
+.layout-3-column {
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 940px;
+    padding-top: 13px;
+}
+
+.services__item {
+    width: 220px;
+    padding-left: 80px;
     
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    padding-top: 28px;
+}
+
+.services__item--pen {
+    background-image: url("./assets/pen.svg");
+}
+
+.services__item--bulb {
+    background-image: url("./assets/bulb.svg");
+}
+
+.services__item--heart {
+    background-image: url("./assets/heart.svg");
+}
+
+.services__item--phone {
+    background-image: url("./assets/phone.svg");
+}
+
+.services__item--bubble {
+    background-image: url("./assets/bubble.svg");
+}
+
+.services__item--star {
+    background-image: url("./assets/star.svg");
+}
+
+.services__item h3 {
+    margin: 0;
+    padding: 0;
+    color: #666d89;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 17.86px;
+}
+    
+.services__item p {
+    margin: 0;
+    padding: 0;
+    padding-top: 15px;
+    color: #666d89;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
 }
