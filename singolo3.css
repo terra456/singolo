@@ -31,7 +31,8 @@ h1, h2, h3, h4, h5, h6, p {
     border-bottom: #323746 solid 6px;
 }
 
-.page-header__wrapper {
+.page-header__wrapper,
+.page-footer__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -248,6 +249,17 @@ h1, h2, h3, h4, h5, h6, p {
 
 .columns-4-layout > * {
     width: 220px;
+    margin-bottom: 20px;
+}
+
+.columns-2-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.columns-2-layout > * {
+    width: 50%;
     margin-bottom: 20px;
 }
 
