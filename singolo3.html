@@ -18,15 +18,15 @@
                     <input type="text" name="user_name" placeholder="Name (Required)" required><br>
                     <input type="email" name="user_email" placeholder="Email (Required)" required><br>
                     <input type="text" name="subject" placeholder="Subject" required><br>
-                    <textarea rows="10" cols="50" placeholder="Describe your project in detail..."></textarea><br>
-                    <input type="submit" value="Submit">
+                    <textarea placeholder="Describe your project in detail..."></textarea><br>
+                    <input class="btn-submit" type="submit" value="Submit">
                 </form>
                 <div class="contact__info">
                     <h3 class="contact__title">Contact Information</h3>
                     <p class="contact__description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</p>
                     <p class="contact__item contact__item--address">Elm St. 14/05 Lost City</p>
-                    <p class="contact__item contact__item--tel">03528 331 86 35</p>
-                    <p class="contact__item contact__item--email">info@singolo.com</p>
+                    <a class="contact__item contact__item--tel" href="#" type="tel">03528 331 86 35</a><br>
+                    <a class="contact__item contact__item--email" href="mail-to:info@singolo.com" type="email">info@singolo.com</a>
                 </div>
             </div>
         </div>
@@ -34,9 +34,9 @@
 
     <footer class="page-footer">
         <div class="page-wrapper page-footer__wrapper">
-            <div class="copyright">
-                <img class="copyright__img" src="assets/img/Copyright.png" alt="copyright">
-            </div>
+            <p class="copyright">
+                &copy; Copyright 2013
+            </p>
             <ul class="social">
                     <li class="social__item">
                         <a class="social__border" href="#"><img class="social__icon" src="./assets/img/facebook.svg"></a>
