@@ -9,8 +9,6 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
-
-
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -26,17 +24,17 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .page-header {
-    height: 89px;
     background-color: #2d303a; 
     border-bottom: #323746 solid 6px;
+    padding-top: 38px;
+    padding-bottom: 32px;
 }
 
 .page-header__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
-    padding: 27px 0;
+    align-items: baseline;
 }
 
 .navigation__list {
@@ -50,20 +48,21 @@ h1, h2, h3, h4, h5, h6, p {
 .logo {
     font-family: Lato;
     font-size: 25px;
+    line-height: 6px;
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
     color: #ffffff;
-
 }
 
 .navigation__item {
     color: #ffffff;
     font-size: 12px;
+    line-height: 6px;
     font-weight: 700;
-    line-height: 6.32px;
     text-transform: uppercase;
     text-decoration: none;
+    
 }
 
 .logo--modifier,
@@ -92,6 +91,8 @@ h1, h2, h3, h4, h5, h6, p {
 .slider {
     background-color: #f06c64;
     border-bottom: #ea676b solid 5px;
+    padding-top: 53px;
+    padding-bottom: 59px;
 }
 
 .slider-flex {
@@ -113,6 +114,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .slider__btn-arrow:hover {
     cursor: pointer;
+    opacity: 0.5;
 }
 
 
@@ -121,8 +123,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .slider__content {
-    margin-top: 52px;
-    margin-bottom: 58px;
     display: flex;
     align-items: center;
 }
@@ -132,46 +132,33 @@ h1, h2, h3, h4, h5, h6, p {
     padding-left: 35px;
 }
 
-.slider::after {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-    content: "";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-    display: block;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-    position: absolute;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-    height: 6px;                                                                                                                                                                                                            
-    width: 100%;                                                                                                                                                                                                                                                                                        
-   background-color: #ea676b;
-}
-
 .services {
     background-color: #f2f2f2;
-    border-bottom: #ffffff solid 6px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+    border-bottom: #ffffff solid 6px;
+    padding-top: 59px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 }
 
 .services__title {
     margin: 0;
     padding: 0;
+    padding-bottom: 18px;
     color: #666d89;
     font-size: 30px;
     font-weight: 900;
-    padding-top: 62px;
+
 }
 
 .services__description {
     margin: 0;
     padding: 0;
+    padding-bottom: 45px;
     color: #767e9e;
     font-size: 18px;
     font-weight: 300;
     line-height: 30px;
-    padding-top: 18px;
     text-align: justify;
 }
 
-.services__items {
-    padding-top: 13px;
-    padding-bottom: 68px;
-}
-
-.layout-3-column,
 .column-3-layout {
     display: flex;
     align-content: stretch;
@@ -182,7 +169,6 @@ h1, h2, h3, h4, h5, h6, p {
     
 }
 
-.layout-3-column > *,
 .column-3-layout > * {
     width: 300px;
 }
@@ -190,9 +176,9 @@ h1, h2, h3, h4, h5, h6, p {
 .services__item {
     width: 220px;
     padding-left: 80px;
+    padding-bottom: 31px;
     background-repeat: no-repeat;
-    background-position: 0 center;
-    padding-top: 31px;
+    background-position: 0 2px;
 }
 
 .services__item--pen {
@@ -220,24 +206,21 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .services__item h3 {
-    margin: 0;
-    padding: 0;
+    padding-bottom: 9px;
     color: #666d89;
     font-size: 18px;
     font-weight: 900;
-    line-height: 17.86px;
+    line-height: 18px;
 }
     
 .services__item p {
-    margin: 0;
-    padding: 0;
-    padding-top: 12px;
     color: #666d89;
     font-size: 12px;
     font-weight: 400;
-    line-height: 21px;
+    line-height: 22px;
     text-align: justify;
-
+    text-overflow: clip;
+    word-wrap: break-word;
 }
 
 .columns-4-layout {
