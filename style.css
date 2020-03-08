@@ -135,7 +135,8 @@ h1, h2, h3, h4, h5, h6, p {
 .services {
     background-color: #f2f2f2;
     border-bottom: #ffffff solid 6px;
-    padding-top: 59px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+    padding-top: 59px;
+    padding-bottom: 29px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 }
 
 .services__title {
@@ -175,8 +176,9 @@ h1, h2, h3, h4, h5, h6, p {
 
 .services__item {
     width: 220px;
+    height: 95px;
     padding-left: 80px;
-    padding-bottom: 31px;
+    padding-bottom: 28px;
     background-repeat: no-repeat;
     background-position: 0 2px;
 }
@@ -240,7 +242,7 @@ h1, h2, h3, h4, h5, h6, p {
     justify-content: space-between;
 }
 
-.columns-4-layout > img:nth-child(1n+13) {
+.portfolio__items > img:nth-child(1n+13) {
     display: none;
 }
 
@@ -316,7 +318,7 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 18px;
     font-weight: 300;
     line-height: 30px;
-
+    text-align: justify;
     padding-bottom: 45px;
 }
 
@@ -326,9 +328,12 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 18px;
     font-weight: 400;
     line-height: 17.86px;
-    
-    margin-top: 14px;
-    margin-bottom: 9px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-top: 14px;
+    padding-bottom: 9px;
+
 }
 
 .person__description {
@@ -377,7 +382,7 @@ h1, h2, h3, h4, h5, h6, p {
 .feedback {
     background-color: #f06c64;
     padding-top: 67px;
-    padding-bottom: 0px;
+    padding-bottom: 2px;
     border-bottom: 6px solid #ea676b;
 }
 
@@ -425,14 +430,14 @@ h1, h2, h3, h4, h5, h6, p {
     border-radius: 5px;
     background-color: #d6564f;
     margin-bottom: 16px;
-    padding: 8px 15px;
+    padding: 7px 15px;
     width: 100%;
     box-sizing: border-box;
     border: 1px solid #d6564f;
 }
 
 .feedback__form input:invalid {
-    border-color:  blue;
+    border-color: red;
 }
 
 .feedback__form textarea {
@@ -468,7 +473,7 @@ input.btn-submit {
 .contact__description,
 .contact__item {
     font-size: 12px;
-    line-height: 22px;
+    line-height: 21.5px;
     color: #f0d8d9;
     font-family: "Lato";
     font-weight: 400;
