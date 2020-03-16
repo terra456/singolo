@@ -541,3 +541,25 @@ input.btn-submit {
     color: #666d89;
     font-size: 12px;
 }
+
+.modal {
+    position: fixed;
+  
+    display: none;
+  
+    color: #000000;
+  
+    background-color: #f8f3f0;
+    
+    top: 120px;
+    left: 50%;
+
+    width: 300px;
+    margin-left: -230px;
+    padding: 50px 80px;
+  }
+  
+  .modal-show {
+    display: block;
+  }
+
