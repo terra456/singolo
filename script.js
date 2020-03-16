@@ -4,7 +4,7 @@ MENU.querySelectorAll('a');
 MENU.addEventListener('click', (event) => {
     MENU.querySelectorAll('a').forEach;
         MENU.classList.remove('.navigation__item--current');
-    
+    console.log(this);
 }
 );
 
