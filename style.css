@@ -92,10 +92,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 
 .slider {
-    background-color: #f06c64;
-    border-bottom: #ea676b solid 5px;
-    padding-top: 53px;
-    padding-bottom: 59px;
+    background-color: #ea676b;
+    position: relative;
+    width: 100vw;
+    height: 600px;
 }
 
 .slider-flex {
@@ -103,21 +103,24 @@ h1, h2, h3, h4, h5, h6, p {
     justify-content: space-between;
     flex-wrap: nowrap;
     align-items: center;
+    height: 100%;
 }
 
 .slider__btn-arrow {
-    width: 16px;
-    height: 27px;
+    width: 26px;
+    height: 37px;
     background-color: #ca4549;
     border: none;
     background: url("./assets/img/arrow-left.svg");
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 4;
+    opacity: 0.5;
 }
 
 .slider__btn-arrow:hover {
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 
@@ -125,33 +128,46 @@ h1, h2, h3, h4, h5, h6, p {
     transform: rotate(180deg);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 }
 
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+}
+
+.slide-1 {
+    background-color: #F06C64;
+    display: none;
+}
+.slide-2 {
+    background-color: #648BF0;
+    
+}
+
 .slider__content {
     display: flex;
     align-items: center;
     width: 796px;
     justify-content: space-between;
-}
-
-.slider__phone {
-    
+    margin: 59px auto auto auto;
 }
 
 .phone {
     position: relative;
     width: 240px;
     height: 483px;
-    background: url("./assets/img/phone-vertical-shadow.svg");
-    background-repeat: no-repeat;
-    background-position: top left;
 }
 
 .phone--horizontal {
     width: 483px;
     height: 240px;
-    background: url("./assets/img/phone-horizontal-shadow.svg");
-    background-repeat: no-repeat;
-    background-position: top left;
 }
+.phone--3 {
+    width: 280px;
+
+}
+
 
 .phone__display {
     position: absolute;
@@ -164,12 +180,36 @@ h1, h2, h3, h4, h5, h6, p {
     top: 14px;
     left: 60px;
 }
+.phone--3 .phone__display {
+    top: 69px;
+
+}
+
+.phone--3-small {
+    transform: scale(0.5);
+    opacity: 0.5;
+}
+.phone--3-left {
+    margin-left: auto;
+    flex-grow: 1;
+}
+.phone--3-right {
+    margin-right: auto;
+    flex-grow: 1;
+}
 
 .phone__corps {
     position: absolute;
     top: 0px;
     left: 0px;
     z-index: 2;
+}
+
+.phone__shadow {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
 }
 
 
