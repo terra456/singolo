@@ -1,38 +1,38 @@
+//подсветка пунктов меню при переходе в данную секцию
+document.addEventListener('scroll', onScroll);
+
+function onScroll(event) {
+    const cursorPosition = window.scrollY;
+    const sections = document.querySelectorAll('section');
+    const menuLinks = document.querySelectorAll('.navigation__list a');
+
+    sections.forEach((el) => {
+        if (el.offsetTop <= cursorPosition && (el.offsetTop + el.offsetHeight) > cursorPosition) {
+            menuLinks.forEach((a) => {
+                a.classList.remove('navigation__item--current');
+                if (el.getAttribute('id')===a.getAttribute('href').substring(1)) {
+                    a.classList.add('navigation__item--current');
+                }
+            })
+        }
+    });
+}
+
+
+
 //переключение активнных пунктов меню
-const MENU = document.querySelector('.navigation__list');
-MENU.querySelectorAll('a');
-MENU.addEventListener('click', (event) => {
-    MENU.querySelectorAll('a').forEach;
-        MENU.classList.remove('.navigation__item--current');
-    console.log(this);
+const TAGS = document.querySelector('.portfolio__tags');
+const portfolioItems = document.querySelector('.portfolio__items');
+
+TAGS.addEventListener('click', (event) => {
+    TAGS.querySelectorAll('li').forEach(el => el.classList.remove('portfolio__tag--active'));
+        event.target.classList.add('portfolio__tag--active');
+
+
 }
 );
 
-var linkNav = MENU.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
-    V = 1;  // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
-for (var i = 0; i < linkNav.length; i++) {
-    linkNav[i].addEventListener('click', function(e) { //по клику на ссылку
-        e.preventDefault(); //отменяем стандартное поведение
 
-        this.classList.add('navigation__item--current');
-        var w = window.pageYOffset,  // производим прокрутку
-            hash = this.href.replace(/[^#]*(.*)/, '$1');  // к id элемента, к которому нужно перейти
-        t = document.querySelector(hash).getBoundingClientRect().top,  // отступ от окна браузера до id
-            start = null;
-        requestAnimationFrame(step);  // подробнее про функцию анимации [developer.mozilla.org]
-        function step(time) {
-            if (start === null) start = time;
-            var progress = time - start,
-                r = (t < 0 ? Math.max(w - progress/V, w + t) : Math.min(w + progress/V, w + t));
-            window.scrollTo(0,r);
-            if (r != w + t) {
-                requestAnimationFrame(step)
-            } else {
-                location.hash = hash  // URL с хэшем
-            }
-        }
-    }, false);
-}
 
 
 
