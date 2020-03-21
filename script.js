@@ -18,6 +18,18 @@ function onScroll(event) {
     });
 }
 
+//change phone display
+const phone = document.querySelectorAll('.phone');
+// const phoneDisplay = phone.querySelector('.phone__display');
+
+phone.forEach((el) => {
+    el.addEventListener('click', function (event) {
+        console.log('cl sm');
+        const phoneDisplay = el.querySelector('.phone__display');
+        phoneDisplay.classList.toggle("hidden");
+})
+});
+
 
 
 //переключение активнных пунктов меню
@@ -39,10 +51,6 @@ TAGS.addEventListener('click', (event) => {
 
 }
 );
-
-
-
-
 
 //открвывает модалку по клику на сабмит
 var submit = document.querySelector('.btn-submit');
