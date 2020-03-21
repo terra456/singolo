@@ -22,12 +22,20 @@ function onScroll(event) {
 
 //переключение активнных пунктов меню
 const TAGS = document.querySelector('.portfolio__tags');
-const portfolioItems = document.querySelector('.portfolio__items');
+const portfolio = document.querySelector('.portfolio__items');
+const portfolioItems = document.querySelector('.portfolio__items').children;
+const arrPortfolioItems = Array.from(portfolioItems);
+
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+};
 
 TAGS.addEventListener('click', (event) => {
     TAGS.querySelectorAll('li').forEach(el => el.classList.remove('portfolio__tag--active'));
         event.target.classList.add('portfolio__tag--active');
 
+    shuffle(arrPortfolioItems); //перемешивает картинки
+    portfolio.appendChild(arrPortfolioItems[0]);
 
 }
 );
