@@ -63,18 +63,48 @@ portfolioImg.forEach((el) => {
 
 
 //открвывает модалку по клику на сабмит
-var submit = document.querySelector('.btn-submit');
-var popup = document.querySelector(".modal");
+const submit = document.querySelector('.btn-submit');
+const popup = document.querySelector(".modal");
+const modalText = document.querySelector('.modal-description');
+const form = document.querySelector('.feedback__form');
+const subject = form.querySelector('input[name=subject]');
+const desk = form.querySelector('textarea');
+
+
+
 
 submit.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
-    console.log('cl sm');
+
+    //заполнение значений в модальном окне p.textContent = форма.имя-инпута.value
+
+    if (subject.value === '') {
+        subjectValue = 'No subject';
+    } else {
+        subjectValue = 'Subject: ' + subject.value;
+    }
+
+    if (desk.value === '') {
+        deskValue = 'No description';
+    } else {
+        deskValue = 'Description: ' + desk.value;
+    }
+
+    const res = 'The letter was sent <br>' + subjectValue + '<br>' + deskValue;
+    modalText.innerHTML = res;
+
+
 });
+
+
+
+
 
 var close = popup.querySelector(".modal-close");
 close.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
-    
+
+    form.reset();
 });
