@@ -32,7 +32,8 @@ h1, h2, h3, h4, h5, h6, p {
     border-bottom: #323746 solid 6px;
     padding-top: 38px;
     padding-bottom: 32px;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     z-index: 5;
     top: 0;
 }
@@ -95,6 +96,13 @@ h1, h2, h3, h4, h5, h6, p {
     color: #f06c64;
 }
 
+.page-main {
+    padding-top: 95px;
+}
+
+section {
+    scroll-margin-top: 95px;
+}
 
 .slider {
     background-color: #ea676b;
@@ -143,11 +151,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 .slide-1 {
     background-color: #F06C64;
-    display: none;
+
 }
 .slide-2 {
     background-color: #648BF0;
-    
+    display: none;
 }
 
 .slider__content {
@@ -162,6 +170,10 @@ h1, h2, h3, h4, h5, h6, p {
     position: relative;
     width: 240px;
     height: 483px;
+}
+
+.hidden {
+    display: none;
 }
 
 .phone--horizontal {
@@ -384,6 +396,11 @@ h1, h2, h3, h4, h5, h6, p {
 
 .portfolio__tag:hover {
     cursor: pointer;
+}
+
+.portfolio__item--border {
+    outline: 5px solid #F06C64;
+ 
 }
 
 .about-us {
