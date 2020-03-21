@@ -31,7 +31,6 @@ phone.forEach((el) => {
 });
 
 
-
 //переключение активнных пунктов меню
 const TAGS = document.querySelector('.portfolio__tags');
 const portfolio = document.querySelector('.portfolio__items');
@@ -51,6 +50,17 @@ TAGS.addEventListener('click', (event) => {
 
 }
 );
+
+//рамки вокруг изображений
+const portfolioImg = document.querySelectorAll('.portfolio__item')
+portfolioImg.forEach((el) => {
+    el.addEventListener('click', function(event) {
+        event.preventDefault();
+        el.classList.toggle("portfolio__item--border");
+})
+
+});
+
 
 //открвывает модалку по клику на сабмит
 var submit = document.querySelector('.btn-submit');
