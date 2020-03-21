@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .page-main {
-    padding-top: 95px;
+    padding-top: 1000px;
 }
 
 section {
@@ -106,9 +106,21 @@ section {
 
 .slider {
     background-color: #ea676b;
-    position: relative;
-    width: 100vw;
+
     height: 600px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.slider__container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 }
 
 .slider-flex {
@@ -120,6 +132,11 @@ section {
 }
 
 .slider__btn-arrow {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    cursor: pointer;
+
     width: 26px;
     height: 37px;
     background-color: #ca4549;
@@ -136,18 +153,72 @@ section {
     opacity: 1;
 }
 
+.slider__btn-arrow--left {
+    left: 0;
+    right: auto;
+}
 
 .slider__btn-arrow--right {
+    right: 0;
+    left: auto;
     transform: rotate(180deg);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 }
 
-.slide {
+.slider__item {
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    width: 70vw;
+    animation: 0.5s ease-in-out;
+}
+
+.slider__item--active,
+.next {
+    display: block;
+}
+
+.next {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
+    width: 100%;
 }
+
+.to-left {
+    animation-name: left;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
 
 .slide-1 {
     background-color: #F06C64;
@@ -155,7 +226,6 @@ section {
 }
 .slide-2 {
     background-color: #648BF0;
-    display: none;
 }
 
 .slider__content {
@@ -400,7 +470,7 @@ section {
 
 .portfolio__item--border {
     outline: 5px solid #F06C64;
- 
+
 }
 
 .about-us {
