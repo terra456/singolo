@@ -128,7 +128,6 @@ function hideItem(direction) {
 function showItem(direction) {
     items[currentItem].classList.add('next', direction);
     items[currentItem].addEventListener('animationend', function() {
-        console.log('eihfewk');
         this.classList.remove('next', direction);
         this.classList.add('slider__item--active');
         isEnabled = true;
