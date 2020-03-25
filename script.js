@@ -18,6 +18,26 @@ function onScroll(event) {
     });
 }
 
+//mobile navigation
+var menu = document.querySelector('.page-header__menu');
+//var menuToggle = document.querySelector('.page-header__toggle');
+var menuToggleClose = document.querySelector('.page-header__toggle--close');
+var menuToggleOpen = document.querySelector('.page-header__toggle--open');
+
+menuToggleClose.addEventListener('click', function() {
+    menu.classList.remove('page-header__menu--close');
+    menu.classList.add('page-header__menu--open');
+
+    console.log("клие по тогглу закрытому");
+});
+
+menuToggleOpen.addEventListener('click', function() {
+    menu.classList.remove('page-header__menu--open');
+    menu.classList.add('page-header__menu--close');
+
+    console.log("клие по тогглу открытому");
+});
+
 //change phone display
 const phone = document.querySelectorAll('.phone');
 // const phoneDisplay = phone.querySelector('.phone__display');

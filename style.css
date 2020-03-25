@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6, p {
     height: 90px;
 }
 
-.page-header__wrapper {
+.page-header__menu {
     padding-top: 38px;
     display: flex;
     flex-direction: row;
@@ -765,4 +765,161 @@ input.btn-submit {
   .modal-show {
     display: block;
   }
+
+@media (max-width: 1019px) {
+    .services__item {
+        width: 35%;
+    }
+
+    .portfolio__items > img:nth-child(3n+1) {
+        grid-column-start: 1;
+    }
+
+    .portfolio__items > img:nth-child(3n+2) {
+        grid-column-start: 2;
+    }
+
+    .portfolio__items > img:nth-child(3n+3) {
+        grid-column-start: 3;
+    }
+
+}
+
+@media (max-width: 1019px) {
+    .services__item {
+        width: 35%;
+    }
+
+    .portfolio__items > img:nth-child(3n+1) {
+        grid-column-start: 1;
+    }
+
+    .portfolio__items > img:nth-child(3n+2) {
+        grid-column-start: 2;
+    }
+
+    .portfolio__items > img:nth-child(3n+3) {
+        grid-column-start: 3;
+    }
+
+}
+
+.page-header__toggle {
+    align-self: flex-end;
+    margin-top: -10px;
+    width: 25px;
+    height: 25px;
+    background-image: url("./assets/img/burger-menu-icon.svg");
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.page-header__toggle--open {
+    transform: rotate(90deg);
+    display: none;
+}
+
+/*.page-header__toggle--close {*/
+    /*display: block;*/
+/*}*/
+
+@media (max-width: 767px) {
+    .services__item {
+        width: 100%;
+    }
+
+    .portfolio__items {
+        gao: 10px;
+    }
+
+    .portfolio__items > img:nth-child(2n+1) {
+        grid-column-start: 1;
+    }
+
+    .portfolio__items > img:nth-child(2n+2) {
+        grid-column-start: 2;
+    }
+    .portfolio__items > img:nth-child(1n+9) {
+        display: none;
+    }
+
+    .about-us__item {
+        width: 100%;
+        margin-bottom: 34px;
+    }
+
+    .about-us {
+        padding-bottom: 0;
+    }
+
+    .feedback__form {
+        width: 100%;
+    }
+
+    .contact__info {
+        width: 100%;
+        margin-bottom: 42px;
+    }
+
+    .copyright {
+        display: none;
+    }
+
+    .page-footer__wrapper {
+        flex-direction: column;
+    }
+
+    /*меню*/
+    /*скрывает само меню, оставляя открытым только пункт меню с гамбургером*/
+    .page-header__menu--close .navigation__item {
+        display: none;
+    }
+
+    .page-header__menu--close .logo {
+        display: block;
+
+    }
+
+    .page-header__menu--open .page-header__toggle--close {
+        display: none;
+    }
+
+    .page-header__menu--open .page-header__toggle--open {
+        display: block;
+    }
+
+    .page-header__menu--open {
+        flex-direction: column;
+        justify-content: unset;
+        position: absolute;
+        width: 80%;
+        height: 100vh;
+        background-color: #2d303a;
+    }
+
+    .navigation__list {
+        flex-direction: column;
+        margin-left: 57px;
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    .page-wrapper--mobile {
+        max-width: 100%;
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+    }
+
+    .logo__wrapper {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 25px;
+    }
+}
 

@@ -10,10 +10,14 @@
 </head>
 <body>
     <header class="page-header">
-        <div class="page-wrapper">
+        <div class="page-wrapper page-wrapper--mobile">
             <!--<h1 class="visually-hidden">Singolo</h1>-->
-            <div class="page-header__wrapper">
-                <a class="logo" href="#">SINGOLO<span class="logo--modifier">*</span></a>
+            <div class="page-header__menu page-header__menu--open">
+                <button class="page-header__toggle page-header__toggle--close" type="button"><span class="visually-hidden">Открыть меню</span></button>
+                <div class="logo__wrapper">
+                    <button class="page-header__toggle page-header__toggle--open" type="button"><span class="visually-hidden">Открыть меню</span></button>
+                    <a class="logo" href="#">SINGOLO<span class="logo--modifier">*</span></a>
+                </div>
                 <nav class="navigation">
                     <ul class="navigation__list">
                         <li><a class="navigation__item" href="#home">HOME</a></li>
