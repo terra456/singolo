@@ -23,6 +23,7 @@ var menu = document.querySelector('.page-header__menu');
 //var menuToggle = document.querySelector('.page-header__toggle');
 var menuToggleClose = document.querySelector('.page-header__toggle--close');
 var menuToggleOpen = document.querySelector('.page-header__toggle--open');
+const menuLinks = document.querySelectorAll('.navigation__list a');
 
 menuToggleClose.addEventListener('click', function() {
     menu.classList.remove('page-header__menu--close');
@@ -36,6 +37,14 @@ menuToggleOpen.addEventListener('click', function() {
     menu.classList.add('page-header__menu--close');
 
     console.log("клие по тогглу открытому");
+});
+
+menuLinks.forEach((el) => {
+    el.addEventListener('click', function () {
+        menu.classList.remove('page-header__menu--open');
+        menu.classList.add('page-header__menu--close');
+        console.log("закрыть меню");
+    })
 });
 
 //change phone display
