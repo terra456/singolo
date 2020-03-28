@@ -7,7 +7,7 @@ function onScroll(event) {
     const menuLinks = document.querySelectorAll('.navigation__list a');
 
     sections.forEach((el) => {
-        if (el.offsetTop <= cursorPosition && (el.offsetTop + el.offsetHeight) > cursorPosition) {
+        if (el.offsetTop-95 <= cursorPosition && (el.offsetTop-95 + el.offsetHeight) > cursorPosition) {
             menuLinks.forEach((a) => {
                 a.classList.remove('navigation__item--current');
                 if (el.getAttribute('id')===a.getAttribute('href').substring(1)) {
@@ -28,22 +28,17 @@ const menuLinks = document.querySelectorAll('.navigation__list a');
 menuToggleClose.addEventListener('click', function() {
     menu.classList.remove('page-header__menu--close');
     menu.classList.add('page-header__menu--open');
-
-    console.log("клие по тогглу закрытому");
 });
 
 menuToggleOpen.addEventListener('click', function() {
     menu.classList.remove('page-header__menu--open');
     menu.classList.add('page-header__menu--close');
-
-    console.log("клие по тогглу открытому");
 });
 
 menuLinks.forEach((el) => {
     el.addEventListener('click', function () {
         menu.classList.remove('page-header__menu--open');
         menu.classList.add('page-header__menu--close');
-        console.log("закрыть меню");
     })
 });
 
@@ -53,14 +48,13 @@ const phone = document.querySelectorAll('.phone');
 
 phone.forEach((el) => {
     el.addEventListener('click', function (event) {
-        console.log('cl sm');
         const phoneDisplay = el.querySelector('.phone__display');
         phoneDisplay.classList.toggle("hidden");
 })
 });
 
 
-//переключение активнных пунктов меню
+//переключение активнных пунктов меню в портфолио
 const TAGS = document.querySelector('.portfolio__tags');
 const portfolio = document.querySelector('.portfolio__items');
 const portfolioItems = document.querySelector('.portfolio__items').children;
@@ -81,12 +75,13 @@ TAGS.addEventListener('click', (event) => {
 );
 
 //рамки вокруг изображений
-const portfolioImg = document.querySelectorAll('.portfolio__item')
-portfolioImg.forEach((el) => {
-    el.addEventListener('click', function(event) {
-        event.preventDefault();
-        el.classList.toggle("portfolio__item--border");
-})
+const portfolioImages = document.querySelector('.portfolio__items');
+portfolioImages.addEventListener('click', (event) => {
+    event.preventDefault();
+    portfolioImages.querySelectorAll('img').forEach(el => {
+        el.classList.remove('portfolio__item--border');
+        event.target.classList.add('portfolio__item--border');
+    });
 
 });
 
