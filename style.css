@@ -162,9 +162,10 @@ section {
 .slider__content {
     display: flex;
     align-items: center;
-    width: 796px;
+    max-width: 796px;
+    width: 78.04vw;
     justify-content: space-between;
-    margin: 59px auto auto auto;
+    margin: auto auto auto auto;
     box-sizing: border-box;
 }
 
@@ -250,57 +251,49 @@ section {
 
 .phone {
     position: relative;
-    width: 240px;
-    height: 483px;
 }
 
 .hidden {
     display: none;
 }
 
+.phone--vertical {
+    margin-top: 38px;
+    max-width: 240px;
+    max-height: 483px;
+    width: 23.53vw;
+    height: 47.35vw;
+}
+
 .phone--horizontal {
-    width: 483px;
-    height: 240px;
+    max-width: 483px;
+    max-height: 240px;
+    width: 47.35vw;
+    height: 23.53vw;
 }
+
 .phone--3 {
-    width: 280px;
-
+    margin-top: 43px;
+    max-width: 254px;
+    max-height: 513px;
+    width: 24.9vw;
+    height: 50.29vw;
 }
-
 
 .phone__display {
     position: absolute;
-    top: 65px;
-    left: 14px;
+    top: 13.46%;
+    left: 5.83%;
     z-index: 3;
-}
-
-.phone--horizontal .phone__display {
-    top: 14px;
-    left: 60px;
-}
-.phone--3 .phone__display {
-    top: 69px;
-
-}
-
-.phone--3-small {
-    transform: scale(0.5);
-    opacity: 0.5;
-}
-.phone--3-left {
-    margin-left: auto;
-    flex-grow: 1;
-}
-.phone--3-right {
-    margin-right: auto;
-    flex-grow: 1;
+    width: 78.33%;
+    height: 68.94%;
 }
 
 .phone__corps {
     position: absolute;
     top: 0px;
     left: 0px;
+    width: 90%;
     z-index: 2;
 }
 
@@ -308,7 +301,35 @@ section {
     position: absolute;
     top: 0px;
     left: 0px;
+    width: 100%;
+    height: 100%;
     z-index: 1;
+}
+
+.phone--horizontal .phone__display {
+    left: 12.46%;
+    top: 5.83%;
+    width: 68.94%;
+    height: 78.33%;
+}
+
+.phone--horizontal .phone__corps {
+    width: 94.82%;
+}
+.phone--3-small {
+    transform: scale(0.5);
+    opacity: 0.5;
+}
+.phone--3-left {
+    left: 10%;
+}
+.phone--3-right {
+    right: 11.5%;
+
+}
+
+.slide-2 .slider__content {
+    justify-content: center;
 }
 
 
@@ -645,10 +666,6 @@ section {
     border: 1px solid #d6564f;
 }
 
-.feedback__form input:invalid {
-    border-color: red;
-}
-
 .feedback__form textarea {
     padding-top: 7px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
     height: 202px;
@@ -657,16 +674,24 @@ section {
 input.btn-submit {
     text-transform: uppercase;
     font-weight: 900;
-    border: 1px solid #d2372f;
-    color: #f0d8d9;
+    font-size: 14px;
+    background: #FBC65F;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 60px;
     cursor: pointer;
+    color: #886A30;
+    padding: 12px 40px;
+    width: auto;
+    border: 1px solid #FBC65F;
 }
 
-.feedback__form input:focus, 
+.feedback__form input:focus,
 .feedback__form textarea:focus {
     border: 1px solid #f48c8f; 
+}
+
+input.btn-submit:focus {
+    border: 1px solid #FBC65F;
 }
 
 .contact__title {
@@ -826,10 +851,6 @@ input.btn-submit {
     display: none;
 }
 
-/*.page-header__toggle--close {*/
-    /*display: block;*/
-/*}*/
-
 @media (max-width: 767px) {
 
 
@@ -838,7 +859,7 @@ input.btn-submit {
     }
 
     .portfolio__items {
-        gao: 10px;
+        gap: 10px;
     }
 
     .portfolio__items > img:nth-child(2n+1) {
@@ -878,7 +899,6 @@ input.btn-submit {
         flex-direction: column;
     }
 
-    /*меню*/
 
     .page-header {
         height: 70px;
@@ -888,12 +908,20 @@ input.btn-submit {
         padding-top: 30px;
     }
     .slider {
-        top: 370px;
+        top: 295px;
+        height: 450px;
+    }
+    .slider__container {
+        height: 450px;
     }
     .page-main {
-        padding-top: 670px;
+        padding-top: 520px;
+    }
+    section {
+        scroll-margin-top: 70px;
     }
 
+    /*меню*/
     /*скрывает само меню, оставляя открытым только пункт меню с гамбургером*/
     .page-header__menu--close .navigation__item {
         display: none;
@@ -983,5 +1011,54 @@ input.btn-submit {
         justify-content: flex-start;
         margin-left: 25px;
     }
+    .slider__btn-arrow--left {
+        left: 20px;
+    }
+    .slider__btn-arrow--right {
+        right: 20px;
+    }
+
+    input.btn-submit {
+        margin-bottom: 40px;
+        width: 100%;
+    }
 }
 
+
+@media (max-width: 375px) {
+    .page-header {
+        height: 70px;
+        border-bottom: none;
+    }
+    .page-header__menu {
+        padding-top: 30px;
+    }
+    .slider {
+        top: 180px;
+        height: 220px;
+    }
+    .slider__container {
+        height: 220px;
+    }
+    .page-main {
+        padding-top: 290px;
+    }
+
+    .phone--vertical,
+    .phone--3 {
+        margin-top: 20px;
+    }
+
+    .slider__btn-arrow {
+        top: 45%;
+        width: 14px;
+        height: 28px;
+    }
+    .slider__btn-arrow--left {
+        left: 10px;
+    }
+    .slider__btn-arrow--right {
+        right: 10px;
+    }
+
+}
